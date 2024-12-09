@@ -40,7 +40,7 @@ export default {
       if (!validate()) return;
 
       try {
-        const response = await axios.post("http://readme.weebat.ru:8080/api/auth/login", {
+        const response = await axios.post("http://readme.weebat.ru:25100/api/auth/login", {
           username: username.value,
           password: password.value,
         });

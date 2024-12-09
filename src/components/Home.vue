@@ -86,7 +86,7 @@ export default {
     async sendPointToServer(x, y) {
       try {
         this.errorMessage = "";
-        const response = await axios.post("http://readme.weebat.ru:8080/api/check-point", {
+        const response = await axios.post("http://readme.weebat.ru:25100/api/check-point", {
           x: x.toFixed(2),
           y: y.toFixed(2),
           r: this.rValue,
@@ -124,7 +124,7 @@ export default {
 
     async clearAllPoints() {
       try {
-        await axios.delete("http://readme.weebat.ru:8080/api/clear-points");
+        await axios.delete("http://readme.weebat.ru:25100/api/clear-points");
         this.points = [];
         redrawCoordinatePlane(this.rValue);
         this.errorMessage = ''; // Сбрасываем ошибку после успешной очистки
