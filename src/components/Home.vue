@@ -124,7 +124,7 @@ export default {
 
     async clearAllPoints() {
       try {
-        await axios.delete("http://localhost:8080/api/clear-points");
+        await axios.delete("http://readme.weebat.ru:8080/api/clear-points");
         this.points = [];
         redrawCoordinatePlane(this.rValue);
         this.errorMessage = ''; // Сбрасываем ошибку после успешной очистки
