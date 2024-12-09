@@ -86,7 +86,7 @@ export default {
     async sendPointToServer(x, y) {
       try {
         this.errorMessage = "";
-        const response = await axios.post("http://localhost:8080/api/check-point", {
+        const response = await axios.post("http://readme.weebat.ru:8080/api/check-point", {
           x: x.toFixed(2),
           y: y.toFixed(2),
           r: this.rValue,
